@@ -26,8 +26,6 @@ agent_executor = create_react_agent(
 
 # Query agent
 example_query = f"""Can you provide a detailed breakdown of the total expenses incurred by the user with the phone number 9876543210?
-Show all expenses, categorized by date, along with the amount spent and the respective category (use appropriate emojis for each category).
-Summarize the total expenditure, highlighting the overall amount spent.
 Present the response in a visually appealing manner using emojis and a thought for the day or a light joke for user.
     """
 
