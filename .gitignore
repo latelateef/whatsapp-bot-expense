@@ -2,3 +2,5 @@
 /node_modules
 /myvenv
 /agents/.env
+/agents/__pycache__
+/agents/migrations
