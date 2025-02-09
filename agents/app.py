@@ -8,16 +8,20 @@ from langgraph.prebuilt import create_react_agent
 from langchain.chat_models import init_chat_model
 import os
 from twilio.rest import Client
+from models import db, init_app
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+from models import db, init_app
+
 
 load_dotenv()
-
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///expenses.db"
 TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
 TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
 TWILIO_PHONE_NUMBER = os.getenv("TWILIO_PHONE_NUMBER")
-
-
+init_app(app)
+migrate = Migrate(app, db)
 twilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
 
@@ -75,9 +79,9 @@ def whatsapp():
     return "", 204
 
 
-# if __name__ == "__main__":
-#     app.run(debug=True)
-response_message = process_user_query(
-    "9876543210", "Tell me expenses in groceries for this month"
-)
-print(response_message)
+if __name__ == "__main__":
+    app.run(debug=True)
+# response_message = process_user_query(
+#     "9876543210", "Tell me expenses in groceries for this month"
+# )
+# print(response_message)
