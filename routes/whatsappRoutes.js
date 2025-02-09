@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import dotenv from 'dotenv';
 import twilio from 'twilio';
-import { classifyMessage, extractExpenseDetails } from '../utils/gemini-ai';
+import { classifyMessage, extractExpenseDetails } from '../utils/nlp';
 import userModel from '../models/user-model';
 import expenseModel from '../models/expense-model';
 import { processQuery } from '../utils/query-processor';
@@ -11,7 +11,7 @@ const router = Router();
 dotenv.config();
 
 // 🔥 Handle Incoming WhatsApp Messages
-router.post("/whatsapp", async (req, res) => {
+router.post("/", async (req, res) => {
     const parsedMsg = req.body;
     console.log(parsedMsg);
     const from = parsedMsg.From;

@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
     user_phone : String,
-    limit : Number,
+    budget_limit : Number,
     expenses : [
         {
             type: mongoose.Schema.Types.ObjectId,
