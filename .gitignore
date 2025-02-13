@@ -1,7 +1,8 @@
 .env
 /node_modules
 /myvenv
-/agents/.env
-/agents/__pycache__
-/agents/migrations
-/agents/myvenv
+/expense-tracker-whatsapp-bot/.env
+/expense-tracker-whatsapp-bot/__pycache__
+/expense-tracker-whatsapp-bot/migrations
+/expense-tracker-whatsapp-bot/myenv
+/expense-tracker-whatsapp-bot/app.log

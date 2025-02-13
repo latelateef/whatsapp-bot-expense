@@ -1,12 +1,12 @@
 # 💰 WhatsApp Expense Tracker Bot 🚀
 
-A smart, AI-powered WhatsApp bot built using **Node.js, Express, MongoDB, and Twilio** that helps you effortlessly track your expenses. Just send a message like **"Spent 500rs on food"**, and it will log your expense, categorize it, and even alert you when you exceed your budget! ⚡
+A smart, AI-powered WhatsApp bot built using **Flask, SQLite, and LangChain Agents** that helps you effortlessly track your expenses. Just send a message like **"Spent 500rs on food"**, and it will log your expense, categorize it, and even alert you when you exceed your budget! ⚡
 
 ## ✨ Features
 
 ✅ **Expense Logging:** Just message your expense (e.g., _"Spent 500rs on groceries"_), and it will be recorded automatically. 📊
 
-🔎 **Smart NLP Understanding:** Powered by **Gemini AI**, it intelligently understands and processes your queries. 🤖
+🔎 **Smart NLP Understanding:** Powered by **LangChain Agents**, it intelligently understands and processes your queries. 🤖
 
 📅 **Date-wise Tracking:** Ask about expenses from _yesterday_, a specific _date_, or for a _category_. 🗂️
 
@@ -16,10 +16,10 @@ A smart, AI-powered WhatsApp bot built using **Node.js, Express, MongoDB, and Tw
 
 ## 🛠️ Tech Stack
 
-- **Node.js** + **Express.js** - Backend API 🚀
-- **MongoDB** - Database for storing expenses 📂
+- **Flask** - Backend API 🚀
+- **SQLite** - Lightweight database for storing expenses 📂
 - **Twilio** - For WhatsApp message integration 📲
-- **Gemini AI** - NLP for smart query processing 🧠
+- **LangChain Agents** - NLP for smart query processing 🧠
 
 ## ⚙️ How It Works
 
@@ -40,20 +40,20 @@ A smart, AI-powered WhatsApp bot built using **Node.js, Express, MongoDB, and Tw
 ### 1️⃣ Clone the Repository
 
 ```bash
- git clone https://github.com/yourusername/whatsapp-expense-bot.git
- cd whatsapp-expense-bot
+git clone https://github.com/yourusername/expense-tracker-whatsapp-bot.git
+cd expense-tracker-whatsapp-bot
 ```
 
 ### 2️⃣ Install Dependencies
 
 ```bash
- npm install
+pip install -r requirements.txt
 ```
 
 ### 3️⃣ Start the Server
 
 ```bash
- npm run dev
+python app.py
 ```
 
 ## 💬 WhatsApp Integration
@@ -80,13 +80,3 @@ Bot: "-🍽️ You spent ₹2300 on Food last week.
 You: "Spent 2000rs on rent"
 Bot: "⚠️ Budget Alert! You've spent ₹7000, exceeding your ₹5000 limit."
 ```
-
-## 🌟 Contributing
-
-Feel free to fork the repo and submit pull requests to improve the bot! Contributions are always welcome. 🤝
-
-## 📜 License
-
-This project is **open-source** under the MIT License. 📝
-
-🚀 **Start tracking your expenses with ease!** 💰📲
